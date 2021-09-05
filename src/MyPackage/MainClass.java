@@ -14,6 +14,9 @@ public class MainClass {
 	System.out.println("Enter your lastName");
 	while(!u1.lastNameValidation(sc.nextLine())) {}
 	
+	System.out.println("Enter email address");
+	while(!u1.emailValidation(sc.nextLine())) {}
+	
 	
 	
 	
