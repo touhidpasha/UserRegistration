@@ -1,7 +1,8 @@
 package MyPackage;
 public class UserRegistration {
 	
-public String firstName,lastName,email;
+public String firstName,lastName,email,pNumber;
+
 public boolean firstNameValidation(String name) {//function for validation first name
 	if(name.length()<3)
 	{	System.out.println("name must have atleast 3 characters ");
@@ -45,5 +46,21 @@ public boolean emailValidation(String email) {//function for validation email ad
 	this.email=email;
 	return true;
 
+}
+
+public boolean phoneNumberValidation(String num) {//function for validation mobile number
+	String countryCode,number;
+	countryCode=num.split(" ")[0];
+	num=num.split(" ")[1];
+	if(num.length()<10)
+	{
+		System.out.println("invalid phone number");
+		return false;
+		
+	}
+	
+	pNumber=num;
+	return true;
+	
 }
 }

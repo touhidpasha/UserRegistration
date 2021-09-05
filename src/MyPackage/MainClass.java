@@ -8,14 +8,17 @@ public class MainClass {
 		Scanner sc=new Scanner(System.in);
 	UserRegistration u1=new UserRegistration();//creating object
 	
-	System.out.println("Enter your firstName");
+	/*System.out.println("Enter your firstName");
 	while(!u1.firstNameValidation(sc.nextLine())) {}
 	
 	System.out.println("Enter your lastName");
 	while(!u1.lastNameValidation(sc.nextLine())) {}
 	
 	System.out.println("Enter email address");
-	while(!u1.emailValidation(sc.nextLine())) {}
+	while(!u1.emailValidation(sc.nextLine())) {}*/
+	
+	System.out.println("Enter phone number");
+	while(!u1.phoneNumberValidation(sc.nextLine())) {}
 	
 	
 	
