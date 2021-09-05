@@ -97,6 +97,19 @@ public boolean passwordValidation(String pasw) {//function for validation of pas
 		return false;
 		
 	}
+	boolean flag3=false;
+	for(int i=0;i<pasw.length();i++)//checking for special character
+		if(pasw.charAt(i)>=33 && pasw.charAt(i)<=47 || pasw.charAt(i)>=58 && pasw.charAt(i)<=64 )
+			{flag3=true;
+			break;}
+			
+	if(flag3==false)
+	{
+
+		System.out.println("pasw must have atleat one special character");
+		return false;
+		
+	}
 	
 	
 	password=pasw;
