@@ -1,7 +1,7 @@
 package MyPackage;
 public class UserRegistration {
 	
-public String firstName,lastName,email,pNumber;
+public String firstName,lastName,email,pNumber,password;
 
 public boolean firstNameValidation(String name) {//function for validation first name
 	if(name.length()<3)
@@ -63,4 +63,18 @@ public boolean phoneNumberValidation(String num) {//function for validation mobi
 	return true;
 	
 }
+
+public boolean passwordValidation(String pasw) {//function for validation of password
+	if(pasw.length()<8)
+	{
+		System.out.println("pasw must be greater than 8 characters");
+		return false;
+		
+	}
+	password=pasw;
+	return true;
+		
+	
+}
+
 }
