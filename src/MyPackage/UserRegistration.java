@@ -65,7 +65,7 @@ public boolean phoneNumberValidation(String num) {//function for validation mobi
 }
 
 public boolean passwordValidation(String pasw) {//function for validation of password
-	boolean flag=false;
+	boolean flag=false,flag2=false;
 	if(pasw.length()<8)
 	{
 		System.out.println("pasw must be greater than 8 characters");
@@ -83,8 +83,21 @@ public boolean passwordValidation(String pasw) {//function for validation of pas
 		System.out.println("pasw must have atleat one capital letter");
 		return false;
 		
-	
 	}
+	
+	for(int i=0;i<pasw.length();i++)//checking for numeric
+		if(pasw.charAt(i)>=48 && pasw.charAt(i)<=57)
+			{flag2=true;
+			break;}
+			
+	if(flag2==false)
+	{
+
+		System.out.println("pasw must have atleat one numeric");
+		return false;
+		
+	}
+	
 	
 	password=pasw;
 	return true;
