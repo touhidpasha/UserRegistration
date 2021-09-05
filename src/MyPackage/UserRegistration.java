@@ -65,12 +65,27 @@ public boolean phoneNumberValidation(String num) {//function for validation mobi
 }
 
 public boolean passwordValidation(String pasw) {//function for validation of password
+	boolean flag=false;
 	if(pasw.length()<8)
 	{
 		System.out.println("pasw must be greater than 8 characters");
 		return false;
 		
 	}
+	for(int i=0;i<pasw.length();i++)//checking for capital letter
+		if(pasw.charAt(i)>=65 && pasw.charAt(i)<=90)
+			{flag=true;
+			break;}
+			
+	if(flag==false)
+	{
+
+		System.out.println("pasw must have atleat one capital letter");
+		return false;
+		
+	
+	}
+	
 	password=pasw;
 	return true;
 		
