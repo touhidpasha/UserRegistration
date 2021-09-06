@@ -43,6 +43,28 @@ public boolean emailValidation(String email) {//function for validation email ad
 	{System.out.println("should start with alphabet ");
 	return false;
 	}
+	if(vendor=="")//verifiying for tld
+	{System.out.println("email must have tld ");
+	return false;
+	}
+	if(domain.length()<2)//verifiying for last tld
+	{System.out.println(" last tld must contain atleat 2 characters");
+	return false;
+	}
+	boolean flagx=false;//allowing only digit alphabet and dot
+	for(int i=0;i<email.length();i++)//checking for special character
+		if(!(email.charAt(i)>=65 && email.charAt(i)<=90 || email.charAt(i)>=48 && email.charAt(i)<=57 || email.charAt(i)==('.') || email.charAt(i)=='@'))
+			{flagx=true;
+			break;}
+			
+	if(flagx==false)
+	{
+
+		System.out.println("email should contain onle alphabet ,numeric and dot");
+		return false;
+		
+	}
+	
 	this.email=email;
 	return true;
 
