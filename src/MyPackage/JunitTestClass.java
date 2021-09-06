@@ -14,7 +14,7 @@ public class JunitTestClass {
 		Scanner sc=new Scanner(System.in);
 
 		System.out.println("Enter your firstName");
-		assertEquals(u1.firstNameValidation(sc.nextLine()),true);
+		assertEquals(u1.firstNameValidation(sc.nextLine()),true);//jnit test case
 		
 		/*System.out.println("Enter your lastName");
 		assertEquals(u1.lastNameValidation(sc.nextLine()),true);
