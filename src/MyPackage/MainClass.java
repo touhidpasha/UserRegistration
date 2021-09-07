@@ -8,7 +8,7 @@ public class MainClass {
 		Scanner sc=new Scanner(System.in);
 	UserRegistration u1=new UserRegistration();//creating object
 	
-	System.out.println("Enter your firstName");
+	try{System.out.println("Enter your firstName"); ///exception will raise if user enter inappropriae date
 	while(!u1.firstNameValidation(sc.nextLine())) {}
 	
 	System.out.println("Enter your lastName");
@@ -22,7 +22,10 @@ public class MainClass {
 	
 	System.out.println("Enter password");
 	while(!u1.passwordValidation(sc.nextLine())) {}
-	
+	}
+	catch(Exception e) {
+		System.out.println("pls enter valid data");
+	}
 	
 	
 	}
