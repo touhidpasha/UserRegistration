@@ -9,7 +9,7 @@ public class MainClass {
 	UserRegistrationUsingRegex u1=new UserRegistrationUsingRegex();//creating object of regex class
 	
 	try{System.out.println("Enter your firstName"); ///exception will raise if user enter inappropriae date
-	while(!u1.firstNameValidation(sc.nextLine())) {}
+	while(!u1.firstNameValidation(sc.nextLine())) {}//function will be called untill user enters correct value
 	
 	System.out.println("Enter your lastName");
 	while(!u1.lastNameValidation(sc.nextLine())) {}
